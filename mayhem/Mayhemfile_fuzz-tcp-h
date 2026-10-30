@@ -1,0 +1,9 @@
+project: savantenvs/melonds
+target: fuzz-tcp-h
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-tcp-h/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-tcp-h
+    libfuzzer: true
+    timeout: 10

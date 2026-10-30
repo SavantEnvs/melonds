@@ -1,0 +1,9 @@
+project: savantenvs/melonds
+target: fuzz-udp-h
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-udp-h/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-udp-h
+    libfuzzer: true
+    timeout: 10

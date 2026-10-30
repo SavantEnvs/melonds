@@ -1,0 +1,9 @@
+project: savantenvs/melonds
+target: fuzz-tftp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-tftp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-tftp
+    libfuzzer: true
+    timeout: 10
