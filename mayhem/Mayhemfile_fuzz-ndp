@@ -1,0 +1,9 @@
+project: savantenvs/melonds
+target: fuzz-ndp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-ndp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-ndp
+    libfuzzer: true
+    timeout: 10

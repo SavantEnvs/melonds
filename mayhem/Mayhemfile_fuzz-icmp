@@ -1,0 +1,9 @@
+project: savantenvs/melonds
+target: fuzz-icmp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-icmp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-icmp
+    libfuzzer: true
+    timeout: 10
