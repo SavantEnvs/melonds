@@ -1,0 +1,9 @@
+project: savantenvs/melonds
+target: fuzz-ip-header
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-ip-header/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-ip-header
+    libfuzzer: true
+    timeout: 10
